@@ -49,7 +49,7 @@ d3.csv('gallery_ownership_data_narrative.csv', function(error, data) {
 
 /********************  Gentry List Menu On Click Event  ***********************/
 
-        li.addEventListener('click',function(e){
+        li.addEventListener('mouseover',function(e){
             console.log(row['Gallery Name']);
             var popup = L.popup()
                 .setLatLng([row.Latitude, row.Longitude])
@@ -117,7 +117,8 @@ d3.csv('gallery_ownership_data_narrative.csv', function(error, data) {
                 story.appendChild(document.createElement("br"));
                 story.appendChild(document.createTextNode(row.Narrative04));
                 }
-        }); //event listener onclick marker
+        }); 
+        //event listener onclick marker
         // var lat = row.Latitude.toString();
         // var lon = row.Longitude.toString();
         // initialize(row.Latitude, row.Longitude);
