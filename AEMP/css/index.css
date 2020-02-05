@@ -304,10 +304,11 @@ button:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.95); /* Black background with opacity */
+  background-color: rgba(234, 225, 197, .95); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
   overflow-y: scroll;
+  color: black;
 
 }
 #introOverlay p {
