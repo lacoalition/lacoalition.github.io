@@ -106,7 +106,7 @@
         </p>
         <center><button onclick="closeOverlay()" type="button">Back to Site </button></center>
     </section>
-
+    <h1 class="section-title">Uncovering Gentrifiers</h1>
     <section class="map">
         <ul id='gentry-list'>
         
@@ -118,12 +118,11 @@
     </div> <!-- end body -->
    
 <script>
-    window.onscroll = function () { positionNavBar() };
-
     let navbar = document.getElementById("navbar");
     let sticky = navbar.offsetTop;
-
+    window.onscroll = function () { positionNavBar() };
     function positionNavBar() {
+        
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
         } else {
