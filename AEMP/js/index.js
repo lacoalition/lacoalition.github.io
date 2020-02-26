@@ -24,20 +24,21 @@ var redIcon = L.icon({
   popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
   });
   
-d3.csv('gallery_ownership_data_narrative.csv', function(error, data) {
+d3.csv('gallery_ownership_data_narrative_2.csv', function(error, data) {
 
     if (error) throw error;
 
     data.forEach(function(row, i) {
         var marker = L.marker([row.Latitude, row.Longitude], {
             icon: redIcon
-            }).addTo(mymap);
-                   
+            }).addTo(mymap);  
+        var image = row['Gallery Image'] ? '<br><img class="img-tooltip" src="../img/media/' + row['Gallery Image'] + '"/>' : ''
         marker.bindPopup(
             "<b>Gallery Name: </b>" + row['Gallery Name'] +
             "<br><b>Address: </b>" + row['Gallery Address'] +
             "<br><b>Gallerist: </b>" + row['Gallerist'] +
-            "<br><b>Owner: </b>" + row['Owner Name']
+            "<br><b>Owner: </b>" + row['Owner Name'] + 
+            image 
             ).openPopup();
 
 /*************************  Gentry List  **************************************/
@@ -50,79 +51,8 @@ d3.csv('gallery_ownership_data_narrative.csv', function(error, data) {
 /********************  Gentry List Menu On Click Event  ***********************/
 
         li.addEventListener('mouseover',function(e){
-            console.log(row['Gallery Name']);
-            var popup = L.popup()
-                .setLatLng([row.Latitude, row.Longitude])
-                .setContent(
-                    "<b>Gallery Name: </b>" + row['Gallery Name'] +
-                    "<br><b>Address: </b>" + row['Gallery Address'] +
-                    "<br><b>Gallerist: </b>" + row['Gallerist'] +
-                    "<br><b>Owner: </b>" + row['Owner Name']
-                    )
-                .openOn(mymap);
-
-            var story = document.getElementById("story");
-            story.innerHTML =
-            "<b>Gallery Name: </b>" + row['Gallery Name'] +
-            "<br><b>Address: </b>" + row['Gallery Address'] +
-            "<br><b>Gallerist: </b>" + row['Gallerist'] +
-            "<br><b>Owner: </b>" + row['Owner Name'];
-            console.log(row.Narrative);
-
-            if (row.Narrative != null) {
-                story.appendChild(document.createElement("br"));
-                story.appendChild(document.createTextNode(row.Narrative));
-                }
-            if (row.Narrative02 != null) {
-                story.appendChild(document.createElement("br"));
-                story.appendChild(document.createTextNode(row.Narrative02));
-                }
-            if (row.Narrative03 != null) {
-                story.appendChild(document.createElement("br"));
-                story.appendChild(document.createTextNode(row.Narrative03));
-                }
-            if (row.Narrative04 != null) {
-                story.appendChild(document.createElement("br"));
-                story.appendChild(document.createTextNode(row.Narrative04));
-                }
-                var lat = parseFloat(row.Latitude);
-                var lon = parseFloat(row.Longitude);
-                initialize(lat, lon);
+            marker.openPopup();
         });
-/********************  Marker On Click Event  *********************************/
-
-        marker.on('click', function(e) {
-            console.log(e);
-            var story = document.getElementById("story");
-            story.innerHTML =
-            "<b>Gallery Name: </b>" + row['Gallery Name'] +
-            "<br><b>Address: </b>" + row['Gallery Address'] +
-            "<br><b>Gallerist: </b>" + row['Gallerist'] +
-            "<br><b>Owner: </b>" + row['Owner Name'];
-            console.log(row.Narrative);
-
-            if (row.Narrative != null) {
-                story.appendChild(document.createElement("br"));
-                story.appendChild(document.createTextNode(row.Narrative));
-                }
-            if (row.Narrative02 != null) {
-                story.appendChild(document.createElement("br"));
-                story.appendChild(document.createTextNode(row.Narrative02));
-                }
-            if (row.Narrative03 != null) {
-                story.appendChild(document.createElement("br"));
-                story.appendChild(document.createTextNode(row.Narrative03));
-                }
-            if (row.Narrative04 != null) {
-                story.appendChild(document.createElement("br"));
-                story.appendChild(document.createTextNode(row.Narrative04));
-                }
-        }); 
-        //event listener onclick marker
-        // var lat = row.Latitude.toString();
-        // var lon = row.Longitude.toString();
-        // initialize(row.Latitude, row.Longitude);
-
     }); //end for loop
 
 }); //end d3

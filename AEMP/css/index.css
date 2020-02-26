@@ -3,6 +3,10 @@
   src: url('../fonts/GT.otf');
 }
 @font-face {
+  font-family: Harbour;
+  src: url('../fonts/Harbour.ttf');
+}
+@font-face {
   font-family: Neue;
   src: url('../fonts/Neue.otf');
 }
@@ -327,10 +331,19 @@ button:hover {
     background: linear-gradient(0deg, rgba(248,247,247,1) 0%, rgba(255,251,237,1) 100%);
 }
 .section-title {
-  font-family: 'GT', HelveticaNeue, sans-serif;
-  font-size: 48px;
+  font-family: 'Harbour', HelveticaNeue, sans-serif;
+  font-size: 36px;
   margin: 1em 0 0 0;
   padding: 0;
   text-align: center;
   color: black;
+}
+.img-tooltip {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+}
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    /* background: #ffb2b2 !important; */
+    background: #fffbed !important;
 }
