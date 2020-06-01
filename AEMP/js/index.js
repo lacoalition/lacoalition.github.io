@@ -21,7 +21,7 @@ var redIcon = L.icon({
   iconSize: [35, 35], // size of the icon
   shadowSize: [50, 64], // size of the shadow
   shadowAnchor: [4, 62], // the same for the shadow
-  popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+//   popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
   });
   
 d3.csv('gallery_ownership_data_narrative_2.csv', function(error, data) {
