@@ -32,7 +32,7 @@ d3.csv('gallery_ownership_data_narrative_2.csv', function(error, data) {
         var marker = L.marker([row.Latitude, row.Longitude], {
             icon: redIcon
             }).addTo(mymap);  
-        var image = row['Gallery Image'] ? '<br><img class="img-tooltip" src="../img/media/' + row['Gallery Image'] + '"/>' : ''
+        var image = row['Gallery Image'] ? '<br><img class="img-tooltip" src="./img/media/' + row['Gallery Image'] + '"/>' : ''
         marker.bindPopup(
             "<b>Gallery Name: </b>" + row['Gallery Name'] +
             "<br><b>Address: </b>" + row['Gallery Address'] +
