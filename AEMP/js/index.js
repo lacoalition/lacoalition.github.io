@@ -24,7 +24,7 @@ var redIcon = L.icon({
 //   popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
   });
   
-d3.csv('gallery_ownership_data_narrative_2.csv', function(error, data) {
+d3.csv('gallery_data.csv', function(error, data) {
 
     if (error) throw error;
 
