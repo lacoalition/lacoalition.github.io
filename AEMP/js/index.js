@@ -28,24 +28,32 @@ d3.csv('gallery_data.csv', function(error, data) {
 
     if (error) throw error;
 
-    data.forEach(function(row, i) {
+    data.forEach(function(row) {
         var marker = L.marker([row.Latitude, row.Longitude], {
             icon: redIcon
             }).addTo(mymap);  
-        var image = row['Gallery Image'] ? '<br><img class="img-tooltip" src="./img/media/' + row['Gallery Image'] + '"/>' : ''
+        var image = row['Gallery Image'] ? '<br><img class="img-tooltip" src="./img/media/' + row['Gallery Image'] + '"/>' : '';
+        var narrative = row['Narrative'] ? "<br><center><b class='read-narrative'>" + "<a href='gallery/" + row['Narrative'] + "'> Beyond The Data </a></b></center>"  : '';
         marker.bindPopup(
             "<b>Gallery Name: </b>" + row['Gallery Name'] +
             "<br><b>Address: </b>" + row['Gallery Address'] +
             "<br><b>Gallerist: </b>" + row['Gallerist'] +
             "<br><b>Owner: </b>" + row['Owner Name'] + 
+            narrative +
             image 
+
             ).openPopup();
 
 /*************************  Gentry List  **************************************/
 
         var ul = document.getElementById('gentry-list');
         var li = document.createElement('li');
-        li.appendChild(document.createTextNode(row['Gallery Name']));
+        var span = document.createElement('span');
+        var isSpecialCase = row['Narrative'] ? ' *' : '';
+        span.className = row['Status'].toLowerCase()+'gallery';
+        li.appendChild(document.createTextNode(row['Gallery Name'] + isSpecialCase));
+        span.appendChild(document.createTextNode(row['Status']));
+        li.appendChild(span);
         ul.appendChild(li);
 
 /********************  Gentry List Menu On Click Event  ***********************/

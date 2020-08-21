@@ -22,7 +22,7 @@ html, body {
     font-family: Calibri, Arial, sans-serif;
     min-height: 100vh;
     color:#fff;    
-    /* background-color: #000; */
+    background-color: #fffbed;
     overflow-x: hidden;
 }
 a {
@@ -177,8 +177,53 @@ li:hover {
     background: rgba(255, 189, 182, 0.3);
 }
 
+.shutdowngallery{
+  font-size: 12px;
+  font-weight: 800;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 16px;
+  box-sizing: border-box;
+  color: rgb(33, 122, 55);
+  padding: 1px 4px;
+  background: rgb(235, 255, 240);
+  float: right;
+  margin: 5px 3px 0 3px;
+}
 
+.activegallery{
+  font-size: 12px;
+  font-weight: 800;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 16px;
+  box-sizing: border-box;
+  color: rgb(163, 27, 18);
+  padding: 1px 4px;
+  background: rgb(255, 239, 238); 
+  float: right;
+  margin: 5px 3px 0 3px;
+}
 
+.relocatedgallery{
+  font-size: 12px;
+  font-weight: 800;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 16px;
+  box-sizing: border-box;
+  color: rgb(214, 175, 0);
+  padding: 1px 4px;
+  background:rgb(214 175 0 / 11%); 
+  float: right;
+  margin: 5px 3px 0 3px;
+}
 @keyframes strikethrough {
     from { transform: scaleX(0); }
     to   { transform: scaleX(1); }
@@ -346,4 +391,9 @@ button:hover {
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
     /* background: #ffb2b2 !important; */
     background: #fffbed !important;
+}
+.read-narrative a{
+    color:#000 !important;
+    font-size: 24px!important;
+    text-decoration: underline;
 }
