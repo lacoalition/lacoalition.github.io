@@ -397,3 +397,60 @@ button:hover {
     font-size: 24px!important;
     text-decoration: underline;
 }
+
+.container {
+  margin-top: 30px;
+}
+
+h3 {
+  margin: 0 auto 30px;
+}
+
+/* READ MORE */
+.read-more-state {
+  display: none;
+}
+
+.read-more-wrap {
+  margin: 0;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: 0.25s ease;
+}
+
+.read-more-state:checked ~ .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: "Read More";
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: "Read Less";
+}
+
+.read-more-trigger {
+  margin-top: 1em;
+  font-family: 'GT';
+  text-align: center;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.read-more-trigger:hover {
+  color: rgb(214, 175, 0);
+
+}
+

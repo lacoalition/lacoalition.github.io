@@ -25,87 +25,77 @@
     <header>
         <img class="animation" src="./img/cover_nobg_02.png">
     </header>
-    <div id="navbar">
+    <!-- <div id="navbar">
         <a class="active">Our Story</a>
         <a href="#map" onclick="scrollToSection(this)">Map</a>
         <a href="#community" onclick="scrollToSection(this)">Community</a>
-    </div>
+    </div> -->
     <div class="body-background">
-
+        
     
     <section class="intro">
-        <p>
-            Every day, at least three families are pushed out of Boyle Heights. The presence
-            of international art-world capital contributes, on an exponential level, to the
-            displacement of this community. Many artists are directly investing in the
-            displacement of their neighbors by moving resources and capital into disinvested
-            spaces, and widely publicizing the virtues of the "transformation,"
-            "pioneering," or "revitalization" they are leading. They are banking on that
-            Flip of the Coin that will grow careers and cash from the flipping of
-            disinvested warehouses and low-income apartment complexes. They are speculating
-            on the likelihood of gentrification-the likelihood that <b>a customer
-            base able to pay top dollar will
-            replace the poor</b> as the inevitable return on their financial investments.
-        </p>
-        <p class="read-more"><button onclick="openOverlay()"type="button">Read More</button></p>
+        <div class="row">
+            <div>
+                <input type="checkbox" class="read-more-state jcf-hidden" id="following-content">
+                <p class="read-more-wrap">Every day, at least three families are pushed out of Boyle Heights. The presence
+                of international art-world capital contributes, on an exponential level, to the
+                displacement of this community. Many artists are directly investing in the
+                displacement of their neighbors by moving resources and capital into disinvested
+                spaces, and widely publicizing the virtues of the "transformation,"
+                "pioneering," or "revitalization" they are leading. They are banking on that
+                Flip of the Coin that will grow careers and cash from the flipping of
+                disinvested warehouses and low-income apartment complexes. They are speculating
+                on the likelihood of gentrification-the likelihood that <b>a customer
+                    base able to pay top dollar will
+                    replace the poor</b> as the inevitable return on their financial investments.
+                <!-- read more goes here -->
+                <p class="read-more-target">
+                    We made this map because these galleries need to understand their impacts on the
+                    history, culture, and community of Boyle Heights, but we also made it for
+                    ourselves and our community-to record our own sense of place, to insist on being
+                    heard by <span style="text-decoration:underline;">x who dismiss our drive for
+                        survival as unfair or short-sighted, </span>and to fortify ourselves to continue
+                    the resistance we have been sustaining for decades.
+                <br>
+                    Boyle Heights is full of organized autonomous movements-not only the Defend
+                    Boyle Heights crews, Union de Vecinos, and the Eastside L.A. Tenants' Union, but
+                    also the Street Vendors, the Mariachis, the Ovarian Psycos-cycles, the Immigrant
+                    Youth Coalition, and the Day Laborers who have all organized autonomously and
+                    who stand in solidarity with our call for community self-determination of land
+                    and space in the neighborhood.
+                <br>
+                    The Boyle Heights <span style="text-decoration:underline;">warehouse district</span>
+                    (the post-industrial neighborhood sometimes known as "The Flats") has seen decades
+                    of militant neighborhood struggles over jobs, police
+                    abuse and gang violence, environmental racism and institutional disinvestment.
+                    The families in Union de Vecinos have marched in this area for years seeking
+                    peace and justice for their neighborhood. Before capital fled the flats, the
+                    women in Union de Vecinos gave the best years of their lives to fight against
+                    bulldozers, institutional neglect, gang violence, and police occupation. They
+                    saved their homes against all odds, they fought for better education for their
+                    children, they created safer streets, and they started one of the first copwatch
+                    programs to defend their children against racist policing. Their struggle and
+                    their labor is the reason that this neighborhood is now seen as a "safe" place
+                    for investment and blue chip galleries today.
+                <br>
+                    Now, we find ourselves again in an historic moment for forging forms of urban
+                    resistance and transformative justice.
+                <br>
+                    Gentrification is never inevitable. It is the result of actions and policies
+                    that can be changed through collective direct action. We challenge everyone, but
+                    especially non-profit developers, land-bankers and gallerists to reconsider
+                    their collective role in the future of Los Angeles.
+                </p>
+                <label for="following-content" class="read-more-trigger"></label>
+            </div>
+        </div>
+
+        <!-- <p class="read-more"><button onclick="openOverlay()"type="button">Read More</button></p> -->
     </section>
-    <section id="introOverlay">
-        <p>
-            Every day, at least three families are pushed out of Boyle Heights. The presence
-            of international art-world capital contributes, on an exponential level, to the
-            displacement of this community. Many artists are directly investing in the
-            displacement of their neighbors by moving resources and capital into disinvested
-            spaces, and widely publicizing the virtues of the "transformation,"
-            "pioneering," or "revitalization" they are leading. They are banking on that
-            Flip of the Coin that will grow careers and cash from the flipping of
-            disinvested warehouses and low-income apartment complexes. They are speculating
-            on the likelihood of gentrification-the likelihood that <span style="text-decoration:underline;">a 
-            customer base able to pay top dollar will
-            replace the poor</span> as the inevitable return on their financial investments.
-        </p>
-        <p>
-            We made this map because these galleries need to understand their impacts on the
-            history, culture, and community of Boyle Heights, but we also made it for
-            ourselves and our community-to record our own sense of place, to insist on being
-            heard by <span style="text-decoration:underline;">x who dismiss our drive for
-            survival as unfair or short-sighted, </span>and to fortify ourselves to continue
-            the resistance we have been sustaining for decades.
-        </p>
-        <p>
-            Boyle Heights is full of organized autonomous movements-not only the Defend
-            Boyle Heights crews, Union de Vecinos, and the Eastside L.A. Tenants' Union, but
-            also the Street Vendors, the Mariachis, the Ovarian Psycos-cycles, the Immigrant
-            Youth Coalition, and the Day Laborers who have all organized autonomously and
-            who stand in solidarity with our call for community self-determination of land
-            and space in the neighborhood.
-        </p>
-        <p>
-            The Boyle Heights <span style="text-decoration:underline;">warehouse district</span> 
-            (the post-industrial neighborhood sometimes known as "The Flats") has seen decades 
-            of militant neighborhood struggles over jobs, police
-            abuse and gang violence, environmental racism and institutional disinvestment.
-            The families in Union de Vecinos have marched in this area for years seeking
-            peace and justice for their neighborhood. Before capital fled the flats, the
-            women in Union de Vecinos gave the best years of their lives to fight against
-            bulldozers, institutional neglect, gang violence, and police occupation. They
-            saved their homes against all odds, they fought for better education for their
-            children, they created safer streets, and they started one of the first copwatch
-            programs to defend their children against racist policing. Their struggle and
-            their labor is the reason that this neighborhood is now seen as a "safe" place
-            for investment and blue chip galleries today.
-        </p>
-        <p>
-            Now, we find ourselves again in an historic moment for forging forms of urban
-            resistance and transformative justice.
-        </p>
-        <p>
-            Gentrification is never inevitable. It is the result of actions and policies
-            that can be changed through collective direct action. We challenge everyone, but
-            especially non-profit developers, land-bankers and gallerists to reconsider
-            their collective role in the future of Los Angeles.
-        </p>
+    <!-- <section id="introOverlay">
+        
         <center><button onclick="closeOverlay()" type="button">Back to Site </button></center>
-    </section>
+    </section> -->
     <h1 class="section-title">BOYLE HEIGHTS IS NOT YOUR ENTERPRISE</h1>
     <section class="map">
         <ul id='gentry-list'>
@@ -117,7 +107,7 @@
     </section>
     </div> <!-- end body -->
    
-<script>
+<!-- <script>
     let navbar = document.getElementById("navbar");
     let sticky = navbar.offsetTop;
     window.onscroll = function () { positionNavBar() };
@@ -146,7 +136,7 @@
     function closeOverlay() {
         document.getElementById("introOverlay").style.display = "none";
     }
-</script>
+</script> -->
 <script src="js/index.js"></script>
 </body>
 </html>
