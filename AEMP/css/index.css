@@ -34,9 +34,9 @@ a:hover,
 a:active {
     color: #333;
 }
-header {
+/* header {
     background-color: #171717;
-}
+} */
 header img{
     width: 100%;
     height: 100%;
@@ -67,7 +67,7 @@ span br{
     margin-left: 25vw;
 }
 .intro span{
-    color: #6d7d87
+    color: #000;
 }
 .animation{
     will-change: auto !important;
@@ -393,9 +393,14 @@ button:hover {
     background: #fffbed !important;
 }
 .read-narrative a{
+  font-family: 'Harbour' !important;
     color:#000 !important;
     font-size: 24px!important;
     text-decoration: underline;
+    font-weight: 300;
+}
+.read-narrative a:hover{
+  color: #ed7800 !important;
 }
 
 .container {
@@ -450,7 +455,7 @@ h3 {
 }
 
 .read-more-trigger:hover {
-  color: rgb(214, 175, 0);
+  color: #ed7800;
 
 }
 
