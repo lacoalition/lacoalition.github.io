@@ -35,11 +35,12 @@
     
     <section class="intro" style="font-size:18px">  
         <p>
-            This project is a compilation of texts and data on galleries detailing the ongoing fight against artwashing and
-            displacement in Boyle Heights. We write this in the middle of the COVID 19 pandemic with 350,000 households bracing to
-            fight against potential evictions when LA’s moratoriums expire. The struggle for housing in LA will now face a wave of
-            further pressure and speculation by city and private developers — no doubt some will once again use art and gallery
-            space as their entry into working class neighborhoods.
+            This project is a compilation of maps, artifacts and narratives on galleries detailing the ongoing fight against
+            artwashing and displacement in Boyle Heights, drawn from the archive of the Boyle Heights Alliance Against Artwashing
+            and Displacement. We write this in the middle of the COVID 19 pandemic with 491,000 households bracing to fight against
+            potential evictions when LA’s moratoriums expire. The struggle for housing in LA will now face a wave of further
+            pressure and speculation by city and private developers — no doubt some will once again use art and gallery space as
+            their entry into working class neighborhoods.
         </p>
         <div class="row">
             <div>
@@ -175,6 +176,20 @@
         <center><button onclick="closeOverlay()" type="button">Back to Site </button></center>
     </section> -->
     <h1 class="section-title">BOYLE HEIGHTS IS NOT YOUR ENTERPRISE</h1>
+    <p style="color:black">
+        This map shows the arts businesses that have capitalized on the city’s strategic gentrification planning and funding
+        initiatives to remake Boyle Heights in their image. Some of these businesses were still operating when COVID-19 began,
+        selling vanity goods that are utterly mismatched to the buying power and material needs of the long-neglected
+        neighborhood. But in other cases, community resistance—demonstrations, boycotts, public education, and yes, truly public
+        art—successfully shut gentrifying businesses down, marking the first steps in reclaiming their space for the people.
+        These tactics work. Still, we must also be wary of the potential for businesses to leave one area only to find another
+        to exploit. Whether it’s Chinatown or West Adams, one community’s victory cannot be the catalyst for another’s
+        destruction.
+        
+        Click on a business’s name or location on the map to see who owns the building and runs the business. Then go Beyond the
+        Data to explore the history of the struggle over that site, as told by those on the front lines of the ongoing battle of
+        Boyle Heights.
+    </p>
     <section class="map">
         <ul id='gentry-list'>
         
@@ -226,17 +241,17 @@
     </div> <!-- end body -->
    
 <!-- <script>
-    let navbar = document.getElementById("navbar");
-    let sticky = navbar.offsetTop;
-    window.onscroll = function () { positionNavBar() };
-    function positionNavBar() {
+    // let navbar = document.getElementById("navbar");
+    // let sticky = navbar.offsetTop;
+    // window.onscroll = function () { positionNavBar() };
+    // function positionNavBar() {
         
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
+    //     if (window.pageYOffset >= sticky) {
+    //         navbar.classList.add("sticky")
+    //     } else {
+    //         navbar.classList.remove("sticky");
+    //     }
+    // }
     function scrollToSection(obj) {
         if(document.getElementById((obj.innerText).toLowerCase())) {
             let section = document.getElementById((obj.innerText).toLowerCase());
@@ -244,16 +259,16 @@
         } else {
             let section = document.getElementsByClassName((obj.innerText).toLowerCase())[0];
             section.scrollIntoView();
-        }
+        }   
         
     }
-    function openOverlay() {
-        document.getElementById("introOverlay").style.display = "block";
-    }
+    // function openOverlay() {
+    //     document.getElementById("introOverlay").style.display = "block";
+    // }
 
-    function closeOverlay() {
-        document.getElementById("introOverlay").style.display = "none";
-    }
+    // function closeOverlay() {
+    //     document.getElementById("introOverlay").style.display = "none";
+    // }
 </script> -->
 <script src="js/index.js"></script>
 </body>
