@@ -1,17 +1,16 @@
 //set up base map
-
-
 var mymap = L.map('mapid').setView([34.041581, -118.221645], 15);
 var bounds = [
     [34.056659, -118.220425], //southwest
     [34.008636, -118.219770]
 ];
-L.tileLayer('https://api.mapbox.com/styles/v1/madebyc/cjk21tgvq2fmg2sqzywrcnnpl/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFkZWJ5YyIsImEiOiJjampwOWYyNnA3d240M3ZsZnIwODN4ZGl5In0.XFXCZd4wqKFsB7jjH0dUOQ', {
-  style: 'mapbox://styles/mapbox/streets-v9',
-  minZoom: 15,
+// L.tileLayer('https://api.mapbox.com/styles/v1/madebyc/cjk21tgvq2fmg2sqzywrcnnpl/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFkZWJ5YyIsImEiOiJjampwOWYyNnA3d240M3ZsZnIwODN4ZGl5In0.XFXCZd4wqKFsB7jjH0dUOQ', {
+//     style: 'mapbox://styles/mapbox/streets-v9',
+L.tileLayer.provider('Stamen.TonerLite', {
+  id: 'mapbox.streets',
+  minZoom: 13,  
   maxZoom: 18,
   maxBounds: bounds,
-  id: 'mapbox.streets',
   trackResize: false,
   accessToken: 'pk.eyJ1IjoibWFkZWJ5YyIsImEiOiJjampwOWYyNnA3d240M3ZsZnIwODN4ZGl5In0.XFXCZd4wqKFsB7jjH0dUOQ'
   }).addTo(mymap);
@@ -42,7 +41,7 @@ d3.csv('gallery_data.csv', function(error, data) {
             narrative +
             image 
 
-            ).openPopup();
+            );
 
 /*************************  Gentry List  **************************************/
 
@@ -61,6 +60,11 @@ d3.csv('gallery_data.csv', function(error, data) {
         li.addEventListener('mouseover',function(e){
             marker.openPopup();
         });
+        marker.addEventListener('mouseover',function () {
+            marker.openPopup();
+            
+        });
+
     }); //end for loop
 
 }); //end d3
