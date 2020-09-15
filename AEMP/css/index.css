@@ -52,30 +52,37 @@ header img{
 
 .paragraph {
     font-family: 'Roboto', Roboto, Calibri, Arial, sans-serif;
-    font-size: 1.5rem;
+    font-size: 18px;
     line-height: 1.5;
     color: black;
     border-bottom: 1px solid black;
 }
 .paragraph p {
     justify-content: center;
-    /* max-width: 50vw; */
-    /* margin-left: 25vw; */
     padding: 0 10em;
 }
 .paragraph span{
     color: #333;
 }
+.paragraph-title {
+    font-family: 'Harbour', HelveticaNeue, sans-serif;
+    font-size: 24px;
+    color: #525252;
+    display: flex;
+    /* justify-content: center; */
+    border-bottom: 1px solid black;
+    /* margin: 0 3em; */
+    padding-bottom: 15px;
+}
 .narrow {
     font-size: 14px;
-    /* width: 60vw; */
     color: #565875;
     padding: 1em 1em !important;
-    /* margin: 0 6em; */
     background: #ffffff;
     margin: 0 15em !important;
     border-radius: 10px;
 }
+
 span br{
     margin-bottom: .8em;
 }
@@ -103,23 +110,6 @@ span br{
     color: #565875;
     margin: .5em;
 }
-.sub-title {
-    text-align: center;
-    color: #d2cfcb;
-    font-size: 1.2em;
-    font-weight: 400;
-    margin: 0;
-}
-.paragraph-title {
-    font-family: 'Harbour', HelveticaNeue, sans-serif;
-    font-size: 24px;
-    color: #525252;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid black;
-    margin: 0 3em;
-    padding-bottom: 15px;
-}
 .map {
     display: flex;
     -ms-flex:50%;
@@ -140,37 +130,6 @@ span br{
     height: 650px; 
 }
 
-.strikethrough {
-    display: inline-block;
-    position: relative;
-    transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
-}
-
-.strikethrough:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 1.5px;
-    margin-top: -0.7em;
-    background: black;
-    transform-origin: center left;
-    animation: strikethrough 1s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
-    transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
-}
-
-
-/* Little hover effect */
-
-.strikethrough:hover {
-    color: rgba(200,0,0,1);
-    background: rgba(255, 189, 182, 0.3);
-}
-
-.strikethrough:hover:after {
-    transform: scaleX(0);
-    transform-origin: center right;
-}
 
 .gallery-list {
     display: flex;
@@ -253,10 +212,6 @@ li:hover {
   float: right;
   margin: 5px 3px 0 3px;
 }
-@keyframes strikethrough {
-    from { transform: scaleX(0); }
-    to   { transform: scaleX(1); }
-}
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -307,10 +262,6 @@ li:hover {
     flex-direction: column;
 }
 
-
-
-
-
 #navbar {
     width: 100vw;
     height: auto;
@@ -350,26 +301,6 @@ button:hover {
   color: #fff;
 }
 
-#introOverlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */ 
-  width: 100%; /* Full width (cover the whole page) */
-  height: auto; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(234, 225, 197, .95); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-  overflow-y: scroll;
-  color: black;
-
-}
-#introOverlay p {
-  margin: 1em 15vw;
-  font-size: 1.2em;
-}
 
 .body-background {
     background: rgb(248,247,247);
@@ -390,6 +321,63 @@ button:hover {
     color: #333;
     line-height: 1.5em;
 }
+@media only screen and (max-width: 965px) {
+  .narrow {
+    margin: 0 10em !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .narrow {
+    margin: 0 5em !important;
+  }
+  .paragraph p {
+    padding: 0 4em;
+  }
+  .paragraph-title {
+    font-size: 18px;
+    margin: 0 1em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .narrow {
+    margin: 0 2em !important;
+    font-size: 12px;
+  }
+  .paragraph {
+    font-size: 14px;
+  }
+  .paragraph p {
+    padding: 0 2em;
+  }
+  .paragraph-title {
+    font-size: 18px;
+    margin: 0;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+  .section-body {
+    font-size: 14px;
+    padding: 0 2em;
+  }
+  .map {
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+  }
+  #mapid {
+    height: 500px;
+  }
+  .view {
+    margin: 0;
+  }
+  #gentry-list {
+    margin: 20px;
+    padding: 0; 
+  }
+}
+
 .img-tooltip {
     display: flex;
     width: 100%;
