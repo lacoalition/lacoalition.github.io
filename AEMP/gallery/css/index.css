@@ -89,10 +89,6 @@ img {
     margin: 0 20%;
 }
 
-.margin-top {
-    margin-top: 2em!important;
-}
-
 p {
   margin:0;
 }
@@ -105,4 +101,21 @@ a {
 .none {
     color: #000 !important;
     text-decoration: none !important;
+}
+
+@media only screen and (max-width: 400px) {
+  .center-text {
+    margin: 0 5%;
+  }
+  .body-paragraph {
+    font-size: 18px;
+  }
+  .left-button {
+    font-size: 14px;
+    padding: 1rem;
+  }
+  .right-button {
+    font-size: 14px;
+    padding: 1rem;
+  }
 }
