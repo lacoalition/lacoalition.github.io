@@ -70,6 +70,10 @@ header img{
     color: #525252;
     display: flex;
     padding-bottom: 15px;
+    height: 0;
+}
+.p-margin {
+    margin-bottom: 2em !important;
 }
 .narrow {
     font-size: 14px;
@@ -376,6 +380,9 @@ button:hover {
     margin: 20px;
     padding: 0; 
   }
+  .p-margin {
+    margin-bottom: 3em !important;
+}
 }
 
 .img-tooltip {
