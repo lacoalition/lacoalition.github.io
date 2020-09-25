@@ -116,9 +116,7 @@ span br{
     -ms-flex:50%;
     flex: 50%;
     padding: 2em 0 2em 1em;
-    /* background-color: #f8f7f7; */
     z-index: 1;
-    border-bottom: 1px solid black;
 }
 .view{
     -ms-flex:50%;
@@ -382,9 +380,13 @@ button:hover {
   }
   .p-margin {
     margin-bottom: 3em !important;
+  }
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    max-width: 250px !important;
+    max-height: 250px !important;
+    overflow-y: scroll;
+  }
 }
-}
-
 .img-tooltip {
     display: flex;
     width: 100%;
@@ -441,28 +443,42 @@ h3 {
 }
 
 .read-more-state ~ .read-more-trigger:before {
-  content: "Read More";
-  border: 1px solid black;
-  padding: 10px 20px;
+  content: "▶ Read More";
 }
 
-
 .read-more-state:checked ~ .read-more-trigger:before {
-  content: "Read Less";
+  content: "▲ Read Less";
 }
 
 .read-more-trigger {
   margin: 2em 0;
-  font-family: 'GT';
+  font-family: 'Harbour', Roboto, Calibri, sans-serif;
   text-align: center;
   outline: none;
   display: flex;
   justify-content: center;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .read-more-trigger:hover {
-  color: #ed7800;
-
+  color: #525252;
 }
 
+button {
+  font-family: 'Harbour', Roboto, Calibri, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin: 0 0 1em 0;
+}
+.button-container {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content:center;
+}
