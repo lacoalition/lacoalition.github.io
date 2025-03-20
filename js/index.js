@@ -6,7 +6,7 @@ var bounds = [
 ];
 // L.tileLayer('https://api.mapbox.com/styles/v1/madebyc/cjk21tgvq2fmg2sqzywrcnnpl/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFkZWJ5YyIsImEiOiJjampwOWYyNnA3d240M3ZsZnIwODN4ZGl5In0.XFXCZd4wqKFsB7jjH0dUOQ', {
 //     style: 'mapbox://styles/mapbox/streets-v9',
-L.tileLayer.provider('OpenStreetMap.Mapnik', {
+L.tileLayer.provider('CartoDB.Voyager', {
   id: 'mapbox.streets',
   minZoom: 13,  
   maxZoom: 18,
